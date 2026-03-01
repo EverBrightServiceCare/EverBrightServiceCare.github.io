@@ -1,101 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>EverBright Service Care</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>EverBright Service Care</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background: #0b3c5d;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #0b3c5d;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    img {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-    footer {
-      background: #0b3c5d;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-box {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        .contact {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .contact a {
+            color: #00c3ff;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            background: #000;
+            color: #aaa;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <h1>EverBright Service Care</h1>
-  <p>Professional Cleaning & Property Services</p>
+    <h1>EverBright Service Care</h1>
+    <p>Professional Cleaning & Property Care Services</p>
 </header>
 
-<section>
-  <h2>About Us</h2>
-  <p>
-    EverBright Service Care provides reliable, professional cleaning and
-    maintenance services. We focus on quality, consistency, and customer
-    satisfaction.
-  </p>
+<div class="hero">
+    <img src="images/mainwalkway" alt="EverBright Service Care cleaning work">
+</div>
 
-  <img src="images/image1.jpeg" alt="Cleaning service">
-</section>
+<div class="section">
+    <h2>Our Services</h2>
 
-<section>
-  <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Commercial Cleaning</h3>
+            <p>Reliable and thorough cleaning for offices, shops, and commercial spaces.</p>
+        </div>
 
-  <div class="services">
-    <div class="service">
-      <h3>Commercial Cleaning</h3>
-      <p>Offices, shops, and business premises cleaned to a high standard.</p>
-      <img src="images/image2.jpeg" alt="Commercial cleaning">
+        <div class="service-box">
+            <h3>Deep Cleaning</h3>
+            <p>Detailed deep cleans for properties that need extra care and attention.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Upholstery & Steam Cleaning</h3>
+            <p>Professional steam cleaning for seating, carpets, and upholstery.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Property Maintenance</h3>
+            <p>General property care to keep your space clean, safe, and presentable.</p>
+        </div>
     </div>
+</div>
 
-    <div class="service">
-      <h3>Deep Cleaning</h3>
-      <p>Thorough deep cleans for properties that need extra care.</p>
-      <img src="images/image0%20(2).png" alt="Deep cleaning">
+<div class="section">
+    <h2>Our Work</h2>
+
+    <div class="gallery">
+        <img src="images/understeamseats.jpg" alt="Steam cleaning seating">
     </div>
-  </div>
-</section>
+</div>
 
-<section>
-  <h2>Contact Us</h2>
-  <p>Email: everbrightservicecare@gmail.com</p>
-  <p>Phone: 07935 768934</p>
-</section>
+<div class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 07935768934</p>
+    <p><strong>Email:</strong> <a href="mailto:everbrightservicecare@gmail.com">everbrightservicecare@gmail.com</a></p>
+</div>
 
 <footer>
-  <p>© 2026 EverBright Service Care</p>
+    © EverBright Service Care
 </footer>
 
 </body>
