@@ -3,81 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EverBright Service Care | Residential & Spa Cleaning Specialists</title>
+<title>EverBright Service Care</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f6f6f6;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.6;
 }
 
+/* HEADER */
 header {
-    background: linear-gradient(rgba(20,50,80,0.85), rgba(20,50,80,0.85)),
-                url("images/mainwalkway.jpg") center/cover no-repeat;
+    background: #0b2a4a;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    margin: 0;
+    font-size: 36px;
 }
 
 header p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background: #f4b400;
-    color: #000;
-    padding: 16px 30px;
     font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    display: inline-block;
+    margin-top: 10px;
 }
 
-.cta-button:hover {
-    background: #e0a800;
-}
-
+/* SECTIONS */
 section {
-    padding: 60px 20px;
-    max-width: 1100px;
+    padding: 40px 20px;
+    max-width: 1000px;
     margin: auto;
 }
 
 h2 {
-    color: #143250;
-    margin-bottom: 20px;
+    color: #0b2a4a;
+    margin-bottom: 15px;
 }
 
-.services {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
+/* SERVICES */
 .services ul {
     list-style: disc;
     padding-left: 20px;
-    columns: 2;
 }
 
-.services li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
+/* IMAGES */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
@@ -86,24 +61,41 @@ h2 {
     border-radius: 8px;
 }
 
-.contact {
-    background: #143250;
+/* CTA */
+.cta {
+    background: #0b2a4a;
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
-.contact a {
-    color: #f4b400;
-    font-weight: bold;
+.cta p {
+    font-size: 18px;
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #f0b400;
+    color: #0b2a4a;
+    font-size: 18px;
+    font-weight: 700;
     text-decoration: none;
+    border-radius: 6px;
 }
 
+.cta a:hover {
+    background: #d89f00;
+}
+
+/* FOOTER */
 footer {
-    background: #0e2238;
+    background: #061a2f;
     color: white;
     text-align: center;
     padding: 20px;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -112,67 +104,45 @@ footer {
 
 <header>
     <h1>EverBright Service Care</h1>
-    <p>Residential, Spa & Leisure Cleaning Specialists</p>
-
-    <a class="cta-button"
-       href="mailto:everbrightservicecare@gmail.com?subject=Free Quote Request">
-        Get a Free Quote
-    </a>
+    <p>Professional Cleaning & Property Services</p>
 </header>
 
 <section>
     <h2>About Us</h2>
     <p>
-        EverBright Service Care provides professional, reliable cleaning services
-        for both residential and specialist environments. We are known for our
-        attention to detail, consistency, and high hygiene standards.
+        EverBright Service Care specialises in professional cleaning and maintenance,
+        with a strong focus on spa, leisure, and residential environments.
+        We pride ourselves on quality, attention to detail, and consistent results.
     </p>
 </section>
 
-<section>
-    <h2>What We Do</h2>
-
-    <div class="services">
-        <ul>
-            <li>Residential Houses & Flats</li>
-            <li>Driveways & Walkways</li>
-            <li>Patios & Outdoor Areas</li>
-            <li>Wheelie Bins & Bin Stores</li>
-            <li>Steam Rooms</li>
-            <li>Saunas</li>
-            <li>Hot Tubs & Jacuzzis</li>
-            <li>Poolside Areas</li>
-            <li>Spa Seating & Wet Areas</li>
-            <li>Leisure Facilities</li>
-        </ul>
-    </div>
+<section class="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Spa & leisure facility cleaning</li>
+        <li>Steam rooms & saunas</li>
+        <li>Hot tubs & poolside areas</li>
+        <li>Residential house cleaning</li>
+        <li>Driveways & walkways</li>
+        <li>Patios & outdoor areas</li>
+        <li>Bin & refuse area cleaning</li>
+    </ul>
 </section>
 
 <section>
     <h2>Our Work</h2>
     <div class="gallery">
-        <img src="images/understeamseats.jpg" alt="Steam room cleaning">
-        <img src="images/stairs.jpg" alt="Stairs and walkway cleaning">
         <img src="images/mainwalkway.jpg" alt="Walkway cleaning">
+        <img src="images/stairs.jpg" alt="Stairway cleaning">
+        <img src="images/understeamseats.jpg" alt="Steam room seating">
     </div>
 </section>
 
-<section class="contact">
-    <h2>Get a Free Quote</h2>
-    <p>
-        For quotes and enquiries, email us and we’ll get back to you promptly.
-    </p>
+<section class="cta">
+    <p>For quotes and enquiries, email us and we’ll get back to you promptly.</p>
+    <p><strong>everbrightservicecare@gmail.com</strong></p>
 
-    <p>
-        <a href="mailto:everbrightservicecare@gmail.com">
-            everbrightservicecare@gmail.com
-        </a>
-    </p>
-
-    <br>
-
-    <a class="cta-button"
-       href="mailto:everbrightservicecare@gmail.com?subject=Free Quote Request">
+    <a href="mailto:everbrightservicecare@gmail.com?subject=Free%20Quote%20Request">
         Request a Free Quote
     </a>
 </section>
