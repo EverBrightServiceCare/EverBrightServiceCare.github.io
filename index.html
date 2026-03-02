@@ -1,155 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EverBright Service Care</title>
+  <meta charset="UTF-8">
+  <title>EverBright Service Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #222;
-    line-height: 1.6;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #ffffff;
+    }
 
-/* HEADER */
-header {
-    background: #0b2a4a;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
+    /* HERO */
+    .hero {
+      position: relative;
+      background-image: url("images/mainwalkway.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 40, 70, 0.75); /* dark blue overlay */
+    }
 
-header p {
-    font-size: 18px;
-    margin-top: 10px;
-}
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: auto;
+    }
 
-/* SECTIONS */
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
 
-h2 {
-    color: #0b2a4a;
-    margin-bottom: 15px;
-}
+    .hero p {
+      font-size: 20px;
+      margin: 0;
+    }
 
-/* SERVICES */
-.services ul {
-    list-style: disc;
-    padding-left: 20px;
-}
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-/* IMAGES */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
+    h2 {
+      color: #1f3a5f;
+      margin-bottom: 15px;
+    }
 
-.gallery img {
-    width: 100%;
-    border-radius: 8px;
-}
+    ul {
+      padding-left: 20px;
+    }
 
-/* CTA */
-.cta {
-    background: #0b2a4a;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-.cta p {
-    font-size: 18px;
-}
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
 
-.cta a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: #f0b400;
-    color: #0b2a4a;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 6px;
-}
+    .contact {
+      background: #1f3a5f;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-.cta a:hover {
-    background: #d89f00;
-}
+    .contact p {
+      font-size: 18px;
+    }
 
-/* FOOTER */
-footer {
-    background: #061a2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-</style>
+    .contact a {
+      color: #f2c14e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: #f2c14e;
+      color: #1a1a1a;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #ffd56b;
+    }
+
+    footer {
+      background: #102a43;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>EverBright Service Care</h1>
-    <p>Professional Cleaning & Property Services</p>
-</header>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>EverBright Service Care</h1>
+      <p>Professional Cleaning &amp; Property Services</p>
+    </div>
+  </div>
 
-<section>
+  <!-- ABOUT -->
+  <section>
     <h2>About Us</h2>
     <p>
-        EverBright Service Care specialises in professional cleaning and maintenance,
-        with a strong focus on spa, leisure, and residential environments.
-        We pride ourselves on quality, attention to detail, and consistent results.
+      EverBright Service Care specialises in professional cleaning and maintenance,
+      with a strong focus on spa, leisure, and residential environments.
+      We pride ourselves on quality, attention to detail, and consistent results.
     </p>
-</section>
+  </section>
 
-<section class="services">
+  <!-- SERVICES -->
+  <section>
     <h2>Our Services</h2>
     <ul>
-        <li>Spa & leisure facility cleaning</li>
-        <li>Steam rooms & saunas</li>
-        <li>Hot tubs & poolside areas</li>
-        <li>Residential house cleaning</li>
-        <li>Driveways & walkways</li>
-        <li>Patios & outdoor areas</li>
-        <li>Bin & refuse area cleaning</li>
+      <li>Spa &amp; leisure facility cleaning</li>
+      <li>Steam rooms &amp; saunas</li>
+      <li>Hot tubs &amp; poolside areas</li>
+      <li>Residential house cleaning</li>
+      <li>Driveways, patios &amp; walkways</li>
+      <li>Bin &amp; external area cleaning</li>
     </ul>
-</section>
 
-<section>
-    <h2>Our Work</h2>
     <div class="gallery">
-        <img src="images/mainwalkway.jpg" alt="Walkway cleaning">
-        <img src="images/stairs.jpg" alt="Stairway cleaning">
-        <img src="images/understeamseats.jpg" alt="Steam room seating">
+      <img src="images/mainwalkway.jpg" alt="Walkway cleaning">
+      <img src="images/stairs.jpg" alt="Stair cleaning">
+      <img src="images/understeamseats.jpg" alt="Steam room seating">
     </div>
-</section>
+  </section>
 
-<section class="cta">
+  <!-- CONTACT -->
+  <div class="contact">
     <p>For quotes and enquiries, email us and we’ll get back to you promptly.</p>
-    <p><strong>everbrightservicecare@gmail.com</strong></p>
+    <p>
+      <a href="mailto:everbrightservicecare@gmail.com">
+        everbrightservicecare@gmail.com
+      </a>
+    </p>
 
-    <a href="mailto:everbrightservicecare@gmail.com?subject=Free%20Quote%20Request">
-        Request a Free Quote
+    <a class="btn" href="mailto:everbrightservicecare@gmail.com">
+      Request a Free Quote
     </a>
-</section>
+  </div>
 
-<footer>
+  <!-- FOOTER -->
+  <footer>
     © 2026 EverBright Service Care
-</footer>
+  </footer>
 
 </body>
 </html>
