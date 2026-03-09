@@ -1,184 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EverBright Service Care</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta
+    name="description"
+    content="EverBright Service Care provides professional exterior cleaning and jet washing services including patios, driveways, pathways, steam rooms, saunas, and poolside areas."
+  />
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
+      padding: 0;
     }
 
-    /* HERO */
-    .hero {
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
       position: relative;
-      background-image: url("images/mainwalkway.jpg");
-      background-size: cover;
-      background-position: center;
-      padding: 90px 20px;
-      text-align: center;
       color: white;
+      text-align: center;
+      padding: 100px 20px;
+      overflow: hidden;
     }
 
-    .hero::before {
+    header::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(20, 45, 75, 0.75);
+      background:
+        linear-gradient(rgba(22, 55, 95, 0.78), rgba(22, 55, 95, 0.78)),
+        url("images/understeamseats.jpg") center/cover no-repeat;
+      z-index: 0;
     }
 
-    .hero-content {
+    header .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 900px;
-      margin: auto;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
-    .hero p {
-      font-size: 20px;
-      margin: 0;
+    header p {
+      font-size: 1.5rem;
     }
 
     section {
-      padding: 50px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
+      padding: 60px 20px;
     }
 
     h2 {
-      color: #1f3a5f;
-      margin-bottom: 15px;
+      color: #16375f;
+      font-size: 2.5rem;
+      margin-bottom: 25px;
     }
 
-    ul {
-      padding-left: 20px;
+    .about p,
+    .contact p {
+      font-size: 1.15rem;
+      max-width: 900px;
+    }
+
+    .services ul {
+      padding-left: 25px;
+      margin-top: 10px;
+    }
+
+    .services li {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
     }
 
-    .gallery img {
+    .gallery-item {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    .gallery-item img {
       width: 100%;
-      border-radius: 8px;
+      display: block;
+      height: auto;
     }
 
-    /* CONTACT */
-    .contact {
-      background: #1f3a5f;
+    .gallery-item p {
+      padding: 14px 16px 18px;
+      font-weight: bold;
+      color: #16375f;
+    }
+
+    .contact-box {
+      background: #2b4673;
       color: white;
       text-align: center;
       padding: 60px 20px;
+      margin-top: 30px;
     }
 
-    .contact p {
-      font-size: 18px;
+    .contact-box p {
+      font-size: 1.2rem;
+      margin-bottom: 18px;
     }
 
-    .contact a.email {
-      color: #f2c14e;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    /* FIXED BUTTON */
-    .btn {
+    .email-link {
       display: inline-block;
-      margin-top: 25px;
-      padding: 16px 36px;
-      background: #f2c14e;
-      color: #1f3a5f;              /* TEXT FIX */
-      font-size: 18px;
-      font-weight: 800;            /* STRONGER */
-      border-radius: 8px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #e3bb4e;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      margin-bottom: 28px;
+      word-break: break-word;
     }
 
-    .btn:hover {
-      background: #ffd56b;
+    .quote-button {
+      display: inline-block;
+      background: #d9b24c;
+      color: #16375f;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 16px 32px;
+      border-radius: 10px;
+      transition: 0.2s ease;
+    }
+
+    .quote-button:hover {
+      background: #c7a03d;
     }
 
     footer {
-      background: #102a43;
+      background: #16375f;
       color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 25px 20px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 80px 20px;
+      }
+
+      header h1 {
+        font-size: 2.3rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .quote-button {
+        width: 100%;
+        max-width: 320px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
+  <header>
     <div class="hero-content">
       <h1>EverBright Service Care</h1>
-      <p>Professional Cleaning &amp; Property Services</p>
+      <p>Professional Exterior Cleaning & Jet Washing Services</p>
     </div>
-  </div>
+  </header>
 
-  <!-- ABOUT -->
-  <section>
+  <section class="about">
     <h2>About Us</h2>
     <p>
-      EverBright Service Care specialises in professional cleaning and maintenance,
-      with a strong focus on spa, leisure, and residential environments.
-      We pride ourselves on quality, attention to detail, and consistent results.
+      EverBright Service Care specialises in professional exterior cleaning and maintenance,
+      with a strong focus on high-quality jet washing and pressure washing services.
+      We help residential and commercial properties look cleaner, brighter, and better maintained
+      with reliable service, attention to detail, and consistently strong results.
     </p>
   </section>
 
-  <!-- SERVICES -->
-  <section>
+  <section class="services">
     <h2>Our Services</h2>
     <ul>
-      <li>Spa &amp; leisure facility cleaning</li>
-      <li>Steam rooms &amp; saunas</li>
-      <li>Hot tubs &amp; poolside areas</li>
-      <li>Residential house cleaning</li>
-      <li>Driveways, patios &amp; walkways</li>
-      <li>Bin &amp; external area cleaning</li>
+      <li>Driveway cleaning</li>
+      <li>Patio and paving cleaning</li>
+      <li>Pathway and walkway cleaning</li>
+      <li>Poolside and leisure area cleaning</li>
+      <li>Steam room and sauna exterior surface cleaning</li>
+      <li>Residential exterior cleaning</li>
+      <li>Bin area cleaning</li>
+      <li>Jet washing and pressure washing</li>
     </ul>
+  </section>
 
+  <section class="results">
+    <h2>Recent Results</h2>
     <div class="gallery">
-      <img src="images/mainwalkway.jpg" alt="Walkway cleaning">
-      <img src="images/stairs.jpg" alt="Stair cleaning">
-      <img src="images/understeamseats.jpg" alt="Steam room seating">
+      <div class="gallery-item">
+        <img src="images/image0 (3).png" alt="Patio before and after cleaning by EverBright Service Care">
+        <p>Patio cleaning transformation</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/mainwalkway.jpg" alt="Clean exterior walkway by EverBright Service Care">
+        <p>Walkway cleaning result</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/understeamseats.jpg" alt="Steam room seating area cleaned by EverBright Service Care">
+        <p>Steam room seating area detail clean</p>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <div class="contact">
-    <p>For quotes and enquiries, email us and we’ll get back to you promptly.</p>
-
-    <p>
-      <a class="email" href="mailto:everbrightservicecare@gmail.com">
+  <section class="contact">
+    <div class="contact-box">
+      <p>For quotes and enquiries, email us and we’ll get back to you promptly.</p>
+      <a class="email-link" href="mailto:everbrightservicecare@gmail.com">
         everbrightservicecare@gmail.com
       </a>
-    </p>
+      <br />
+      <a class="quote-button" href="mailto:everbrightservicecare@gmail.com?subject=Free%20Quote%20Request">
+        Request a Free Quote
+      </a>
+    </div>
+  </section>
 
-    <a class="btn" href="mailto:everbrightservicecare@gmail.com">
-      Request a Free Quote
-    </a>
-  </div>
-
-  <!-- FOOTER -->
   <footer>
-    © 2026 EverBright Service Care
+    <p>&copy; 2026 EverBright Service Care</p>
   </footer>
 
 </body>
