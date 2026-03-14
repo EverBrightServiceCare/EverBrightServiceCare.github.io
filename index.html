@@ -15,16 +15,22 @@ font-family:Arial, sans-serif;
 margin:0;
 background:#f4f4f4;
 color:#333;
-line-height:1.6;
 }
 
 /* HEADER */
 
 header{
-background:#16375f;
+background:
+repeating-linear-gradient(
+45deg,
+#16375f,
+#16375f 10px,
+#1f4c80 10px,
+#1f4c80 20px
+);
 color:white;
 text-align:center;
-padding:90px 20px;
+padding:100px 20px;
 }
 
 header h1{
@@ -49,32 +55,21 @@ color:#16375f;
 margin-bottom:20px;
 }
 
-/* SERVICES */
-
-.services ul{
-padding-left:20px;
-}
-
-.services li{
-margin-bottom:10px;
-font-size:1.1rem;
-}
-
 /* BEFORE AFTER SLIDER */
 
-.slider-container{
+.before-after{
 position:relative;
-max-width:800px;
+max-width:850px;
 margin:auto;
 overflow:hidden;
 }
 
-.slider-container img{
+.before-after img{
 width:100%;
 display:block;
 }
 
-.after-img{
+.after{
 position:absolute;
 top:0;
 left:0;
@@ -83,9 +78,23 @@ overflow:hidden;
 height:100%;
 }
 
-.slider{
+.slider-line{
+position:absolute;
+top:0;
+left:50%;
+width:4px;
+height:100%;
+background:white;
+}
+
+input[type=range]{
+position:absolute;
+top:0;
+left:0;
 width:100%;
-margin-top:10px;
+height:100%;
+opacity:0;
+cursor:ew-resize;
 }
 
 /* GALLERY */
@@ -155,36 +164,23 @@ We restore patios, driveways, walkways and outdoor surfaces for residential and 
 
 </section>
 
-<section class="services">
-
-<h2>Our Services</h2>
-
-<ul>
-<li>Driveway cleaning</li>
-<li>Patio cleaning</li>
-<li>Jet washing</li>
-<li>Walkway cleaning</li>
-<li>Poolside cleaning</li>
-<li>Steam room and sauna cleaning</li>
-</ul>
-
-</section>
-
 <section>
 
 <h2>Patio Cleaning Transformation</h2>
 
-<div class="slider-container">
+<div class="before-after">
 
 <img src="images/patio before.jpeg">
 
-<div class="after-img" id="after">
+<div class="after" id="after">
 
 <img src="images/patio after.jpeg">
 
 </div>
 
-<input type="range" min="0" max="100" value="50" class="slider" id="slider">
+<div class="slider-line" id="line"></div>
+
+<input type="range" min="0" max="100" value="50" id="range">
 
 </div>
 
@@ -228,12 +224,14 @@ Request Free Quote
 
 <script>
 
-const slider=document.getElementById("slider");
+const range=document.getElementById("range");
 const after=document.getElementById("after");
+const line=document.getElementById("line");
 
-slider.addEventListener("input",function(){
+range.addEventListener("input",function(){
 
 after.style.width=this.value+"%";
+line.style.left=this.value+"%";
 
 });
 
