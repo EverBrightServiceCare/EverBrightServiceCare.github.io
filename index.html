@@ -1,253 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EverBright Service Care</title>
-  <meta
-    name="description"
-    content="EverBright Service Care provides professional exterior cleaning and jet washing services including patios, driveways, pathways, steam rooms, saunas, and poolside areas."
-  />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EverBright Service Care</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
+<style>
 
-    header {
-      position: relative;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-      overflow: hidden;
-    }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(rgba(22, 55, 95, 0.78), rgba(22, 55, 95, 0.78)),
-        url("images/image0(3).png") center/cover no-repeat;
-      z-index: 0;
-    }
+body{
+font-family:Arial, sans-serif;
+background:#f4f4f4;
+color:#333;
+line-height:1.6;
+}
 
-    header .hero-content {
-      position: relative;
-      z-index: 1;
-    }
+header{
+position:relative;
+color:white;
+text-align:center;
+padding:100px 20px;
+overflow:hidden;
+}
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
+header::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(22,55,95,.78),rgba(22,55,95,.78)),
+url("images/image0 (3).png") center/cover no-repeat;
+z-index:0;
+}
 
-    header p {
-      font-size: 1.5rem;
-    }
+header .hero-content{
+position:relative;
+z-index:1;
+}
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+header h1{
+font-size:3rem;
+margin-bottom:10px;
+}
 
-    h2 {
-      color: #16375f;
-      font-size: 2.5rem;
-      margin-bottom: 25px;
-    }
+section{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
 
-    .about p,
-    .contact p {
-      font-size: 1.15rem;
-      max-width: 900px;
-    }
+h2{
+color:#16375f;
+font-size:2.2rem;
+margin-bottom:25px;
+}
 
-    .services ul {
-      padding-left: 25px;
-      margin-top: 10px;
-    }
+.services ul{
+padding-left:20px;
+}
 
-    .services li {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-    }
+.services li{
+margin-bottom:12px;
+font-size:1.1rem;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 25px;
-    }
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
 
-    .gallery-item {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    }
+.gallery-item{
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
 
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
+.gallery-item img{
+width:100%;
+display:block;
+}
 
-    .gallery-item p {
-      padding: 14px 16px 18px;
-      font-weight: bold;
-      color: #16375f;
-    }
+.gallery-item p{
+padding:14px;
+font-weight:bold;
+color:#16375f;
+}
 
-    .contact-box {
-      background: #2b4673;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-      margin-top: 30px;
-    }
+/* BEFORE AFTER SLIDER */
 
-    .contact-box p {
-      font-size: 1.2rem;
-      margin-bottom: 18px;
-    }
+.before-after-wrap{
+max-width:900px;
+margin:40px auto;
+}
 
-    .email-link {
-      display: inline-block;
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #e3bb4e;
-      text-decoration: none;
-      margin-bottom: 28px;
-      word-break: break-word;
-    }
+.before-after-slider{
+position:relative;
+width:100%;
+overflow:hidden;
+border-radius:14px;
+}
 
-    .quote-button {
-      display: inline-block;
-      background: #d9b24c;
-      color: #16375f;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: bold;
-      padding: 16px 32px;
-      border-radius: 10px;
-      transition: 0.2s ease;
-    }
+.before-after-slider img{
+width:100%;
+display:block;
+}
 
-    .quote-button:hover {
-      background: #c7a03d;
-    }
+.after-image-wrap{
+position:absolute;
+top:0;
+left:0;
+width:50%;
+overflow:hidden;
+}
 
-    footer {
-      background: #16375f;
-      color: white;
-      text-align: center;
-      padding: 25px 20px;
-      font-size: 1rem;
-    }
+.slider-line{
+position:absolute;
+top:0;
+left:50%;
+width:3px;
+height:100%;
+background:white;
+}
 
-    @media (max-width: 768px) {
-      header {
-        padding: 80px 20px;
-      }
+.slider-control{
+position:absolute;
+inset:0;
+width:100%;
+opacity:0;
+cursor:ew-resize;
+}
 
-      header h1 {
-        font-size: 2.3rem;
-      }
+.contact{
+background:#2b4673;
+color:white;
+text-align:center;
+padding:60px 20px;
+margin-top:40px;
+}
 
-      header p {
-        font-size: 1.2rem;
-      }
+.quote-button{
+display:inline-block;
+background:#d9b24c;
+color:#16375f;
+text-decoration:none;
+padding:15px 30px;
+border-radius:8px;
+font-weight:bold;
+margin-top:15px;
+}
 
-      h2 {
-        font-size: 2rem;
-      }
+footer{
+background:#16375f;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
 
-      .quote-button {
-        width: 100%;
-        max-width: 320px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
-  <header>
-    <div class="hero-content">
-      <h1>EverBright Service Care</h1>
-      <p>Professional Exterior Cleaning & Jet Washing Services</p>
-    </div>
-  </header>
+<header>
+<div class="hero-content">
+<h1>EverBright Service Care</h1>
+<p>Professional Exterior Cleaning & Jet Washing</p>
+</div>
+</header>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>
-      EverBright Service Care specialises in professional exterior cleaning and maintenance,
-      with a strong focus on high-quality jet washing and pressure washing services.
-      We help residential and commercial properties look cleaner, brighter, and better maintained
-      with reliable service, attention to detail, and consistently strong results.
-    </p>
-  </section>
+<section>
 
-  <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Driveway cleaning</li>
-      <li>Patio and paving cleaning</li>
-      <li>Pathway and walkway cleaning</li>
-      <li>Poolside and leisure area cleaning</li>
-      <li>Steam room and sauna exterior surface cleaning</li>
-      <li>Residential exterior cleaning</li>
-      <li>Bin area cleaning</li>
-      <li>Jet washing and pressure washing</li>
-    </ul>
-  </section>
+<h2>About Us</h2>
 
-  <section class="results">
-    <h2>Recent Results</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="images/image0 (3).png" alt="Patio before and after cleaning by EverBright Service Care">
-        <p>Patio cleaning transformation</p>
-      </div>
+<p>
+EverBright Service Care specialises in professional exterior cleaning and jet washing services.
+We help residential and commercial properties restore surfaces and maintain a clean appearance
+with reliable service and attention to detail.
+</p>
 
-      <div class="gallery-item">
-        <img src="images/mainwalkway.jpg" alt="Clean exterior walkway by EverBright Service Care">
-        <p>Walkway cleaning result</p>
-      </div>
+</section>
 
-      <div class="gallery-item">
-        <img src="images/understeamseats.jpg" alt="Steam room seating area cleaned by EverBright Service Care">
-        <p>Steam room seating area detail clean</p>
-      </div>
-    </div>
-  </section>
+<section class="services">
 
-  <section class="contact">
-    <div class="contact-box">
-      <p>For quotes and enquiries, email us and we’ll get back to you promptly.</p>
-      <a class="email-link" href="mailto:everbrightservicecare@gmail.com">
-        everbrightservicecare@gmail.com
-      </a>
-      <br />
-      <a class="quote-button" href="mailto:everbrightservicecare@gmail.com?subject=Free%20Quote%20Request">
-        Request a Free Quote
-      </a>
-    </div>
-  </section>
+<h2>Our Services</h2>
 
-  <footer>
-    <p>&copy; 2026 EverBright Service Care</p>
-  </footer>
+<ul>
+<li>Driveway cleaning</li>
+<li>Patio cleaning</li>
+<li>Walkway cleaning</li>
+<li>Jet washing</li>
+<li>Poolside cleaning</li>
+<li>Steam room and sauna cleaning</li>
+<li>Residential exterior cleaning</li>
+<li>Commercial exterior cleaning</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Patio Cleaning Transformation</h2>
+
+<div class="before-after-wrap">
+
+<div class="before-after-slider">
+
+<img src="images/patio-before.png" class="before-image">
+
+<div class="after-image-wrap" id="afterImageWrap">
+
+<img src="images/image0 (3).png" class="after-image">
+
+</div>
+
+<div class="slider-line" id="sliderLine"></div>
+
+<input type="range" min="0" max="100" value="50" class="slider-control" id="sliderControl">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Recent Results</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/mainwalkway.jpg">
+<p>Walkway cleaning result</p>
+</div>
+
+<div class="gallery-item">
+<img src="images/understeamseats.jpg">
+<p>Steam room seating area detail clean</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact</h2>
+
+<p>Email us for quotes and enquiries:</p>
+
+<p><strong>everbrightservicecare@gmail.com</strong></p>
+
+<a class="quote-button" href="mailto:everbrightservicecare@gmail.com?subject=Free Quote Request">
+Request a Free Quote
+</a>
+
+</section>
+
+<footer>
+
+<p>© EverBright Service Care</p>
+
+</footer>
+
+<script>
+
+const slider=document.getElementById("sliderControl");
+const after=document.getElementById("afterImageWrap");
+const line=document.getElementById("sliderLine");
+
+slider.addEventListener("input",function(){
+let value=this.value+"%";
+after.style.width=value;
+line.style.left=value;
+});
+
+</script>
 
 </body>
 </html>
