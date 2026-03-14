@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,7 +34,7 @@ header p{
 font-size:1.3rem;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 max-width:1100px;
@@ -50,26 +49,26 @@ margin-bottom:20px;
 
 /* BEFORE AFTER SLIDER */
 
-.ba-container{
+.slider-container{
 position:relative;
 max-width:850px;
 margin:auto;
 overflow:hidden;
 }
 
-.ba-container img{
-display:block;
+.before-img{
 width:100%;
-height:auto;
+display:block;
 }
 
-.after-wrapper{
+.after-img{
 position:absolute;
 top:0;
 left:0;
-width:50%;
+width:100%;
 height:100%;
-overflow:hidden;
+object-fit:cover;
+clip-path: inset(0 50% 0 0);
 }
 
 .divider{
@@ -82,7 +81,7 @@ background:white;
 pointer-events:none;
 }
 
-#slider{
+input[type=range]{
 position:absolute;
 top:0;
 left:0;
@@ -163,15 +162,11 @@ We restore patios, driveways, walkways and outdoor surfaces for residential and 
 
 <h2>Patio Cleaning Transformation</h2>
 
-<div class="ba-container">
+<div class="slider-container">
 
-<img src="images/patio before.jpeg">
+<img src="images/patio before.jpeg" class="before-img">
 
-<div class="after-wrapper" id="afterWrapper">
-
-<img src="images/patio after.jpeg">
-
-</div>
+<img src="images/patio after.jpeg" class="after-img" id="afterImage">
 
 <div class="divider" id="divider"></div>
 
@@ -204,9 +199,7 @@ We restore patios, driveways, walkways and outdoor surfaces for residential and 
 <p><strong>info@everbrightservicecare.com</strong></p>
 
 <a class="quote-btn" href="mailto:info@everbrightservicecare.com">
-
 Request Free Quote
-
 </a>
 
 </section>
@@ -220,20 +213,19 @@ Request Free Quote
 <script>
 
 const slider = document.getElementById("slider");
-const afterWrapper = document.getElementById("afterWrapper");
+const afterImage = document.getElementById("afterImage");
 const divider = document.getElementById("divider");
 
 slider.addEventListener("input", function(){
 
-let value = this.value + "%";
+let value = this.value;
 
-afterWrapper.style.width = value;
-divider.style.left = value;
+afterImage.style.clipPath = "inset(0 " + (100-value) + "% 0 0)";
+divider.style.left = value + "%";
 
 });
 
 </script>
 
 </body>
-
 </html>
