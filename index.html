@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -78,7 +79,42 @@ left:50%;
 width:4px;
 height:100%;
 background:white;
-pointer-events:none;
+z-index:3;
+}
+
+/* ROUND HANDLE */
+
+.handle{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:40px;
+height:40px;
+background:white;
+border-radius:50%;
+border:3px solid #16375f;
+}
+
+/* LABELS */
+
+.label{
+position:absolute;
+top:20px;
+background:rgba(0,0,0,0.6);
+color:white;
+padding:6px 12px;
+font-size:14px;
+border-radius:4px;
+z-index:4;
+}
+
+.before-label{
+left:20px;
+}
+
+.after-label{
+right:20px;
 }
 
 input[type=range]{
@@ -89,6 +125,7 @@ width:100%;
 height:100%;
 opacity:0;
 cursor:ew-resize;
+z-index:5;
 }
 
 /* GALLERY */
@@ -164,11 +201,16 @@ We restore patios, driveways, walkways and outdoor surfaces for residential and 
 
 <div class="slider-container">
 
+<span class="label before-label">Before</span>
+<span class="label after-label">After</span>
+
 <img src="images/patio before.jpeg" class="before-img">
 
 <img src="images/patio after.jpeg" class="after-img" id="afterImage">
 
-<div class="divider" id="divider"></div>
+<div class="divider" id="divider">
+<div class="handle"></div>
+</div>
 
 <input type="range" min="0" max="100" value="50" id="slider">
 
@@ -199,7 +241,9 @@ We restore patios, driveways, walkways and outdoor surfaces for residential and 
 <p><strong>info@everbrightservicecare.com</strong></p>
 
 <a class="quote-btn" href="mailto:info@everbrightservicecare.com">
+
 Request Free Quote
+
 </a>
 
 </section>
@@ -228,4 +272,5 @@ divider.style.left = value + "%";
 </script>
 
 </body>
+
 </html>
