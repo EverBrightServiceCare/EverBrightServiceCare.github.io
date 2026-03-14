@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -76,24 +75,24 @@ clip-path: inset(0 50% 0 0);
 position:absolute;
 top:0;
 left:50%;
-width:4px;
+width:3px;
 height:100%;
 background:white;
 z-index:3;
 }
 
-/* RECTANGLE HANDLE */
+/* SMALLER HANDLE */
 
 .handle{
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-width:28px;
-height:36px;
+width:22px;
+height:28px;
 background:white;
-border-radius:8px;
-border:3px solid #16375f;
+border-radius:6px;
+border:2px solid #16375f;
 }
 
 /* LABELS */
@@ -107,16 +106,15 @@ padding:6px 12px;
 font-size:14px;
 border-radius:4px;
 z-index:4;
+transition:opacity .2s;
 }
 
-/* swapped */
-
 .before-label{
-right:20px;
+left:20px;
 }
 
 .after-label{
-left:20px;
+right:20px;
 }
 
 input[type=range]{
@@ -181,7 +179,6 @@ padding:20px;
 <header>
 
 <h1>EverBright Service Care</h1>
-
 <p>Professional Exterior Cleaning & Jet Washing</p>
 
 </header>
@@ -203,11 +200,13 @@ We restore patios, driveways, walkways and outdoor surfaces for residential and 
 
 <div class="slider-container">
 
-<span class="label before-label">Before</span>
-<span class="label after-label">After</span>
+<span class="label before-label" id="beforeLabel">Before</span>
+<span class="label after-label" id="afterLabel">After</span>
 
+<!-- DIRTY IMAGE (LEFT) -->
 <img src="images/patio before.jpeg" class="before-img">
 
+<!-- CLEAN IMAGE (RIGHT) -->
 <img src="images/patio after.jpeg" class="after-img" id="afterImage">
 
 <div class="divider" id="divider">
@@ -259,6 +258,8 @@ Request Free Quote
 const slider = document.getElementById("slider");
 const afterImage = document.getElementById("afterImage");
 const divider = document.getElementById("divider");
+const beforeLabel = document.getElementById("beforeLabel");
+const afterLabel = document.getElementById("afterLabel");
 
 slider.addEventListener("input", function(){
 
@@ -266,6 +267,20 @@ let value = this.value;
 
 afterImage.style.clipPath = "inset(0 " + (100-value) + "% 0 0)";
 divider.style.left = value + "%";
+
+/* Hide labels when slider overlaps */
+
+if(value > 30){
+beforeLabel.style.opacity = 0;
+}else{
+beforeLabel.style.opacity = 1;
+}
+
+if(value < 70){
+afterLabel.style.opacity = 0;
+}else{
+afterLabel.style.opacity = 1;
+}
 
 });
 
