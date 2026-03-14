@@ -20,17 +20,10 @@ color:#333;
 /* HEADER */
 
 header{
-background:
-repeating-linear-gradient(
-45deg,
-#16375f,
-#16375f 10px,
-#1f4c80 10px,
-#1f4c80 20px
-);
+background:#16375f;
 color:white;
 text-align:center;
-padding:100px 20px;
+padding:90px 20px;
 }
 
 header h1{
@@ -42,7 +35,7 @@ header p{
 font-size:1.3rem;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 max-width:1100px;
@@ -57,37 +50,39 @@ margin-bottom:20px;
 
 /* BEFORE AFTER SLIDER */
 
-.before-after{
+.ba-container{
 position:relative;
 max-width:850px;
 margin:auto;
 overflow:hidden;
 }
 
-.before-after img{
-width:100%;
+.ba-container img{
 display:block;
+width:100%;
+height:auto;
 }
 
-.after{
+.after-wrapper{
 position:absolute;
 top:0;
 left:0;
 width:50%;
-overflow:hidden;
 height:100%;
+overflow:hidden;
 }
 
-.slider-line{
+.divider{
 position:absolute;
 top:0;
 left:50%;
 width:4px;
 height:100%;
 background:white;
+pointer-events:none;
 }
 
-input[type=range]{
+#slider{
 position:absolute;
 top:0;
 left:0;
@@ -168,19 +163,19 @@ We restore patios, driveways, walkways and outdoor surfaces for residential and 
 
 <h2>Patio Cleaning Transformation</h2>
 
-<div class="before-after">
+<div class="ba-container">
 
 <img src="images/patio before.jpeg">
 
-<div class="after" id="after">
+<div class="after-wrapper" id="afterWrapper">
 
 <img src="images/patio after.jpeg">
 
 </div>
 
-<div class="slider-line" id="line"></div>
+<div class="divider" id="divider"></div>
 
-<input type="range" min="0" max="100" value="50" id="range">
+<input type="range" min="0" max="100" value="50" id="slider">
 
 </div>
 
@@ -224,14 +219,16 @@ Request Free Quote
 
 <script>
 
-const range=document.getElementById("range");
-const after=document.getElementById("after");
-const line=document.getElementById("line");
+const slider = document.getElementById("slider");
+const afterWrapper = document.getElementById("afterWrapper");
+const divider = document.getElementById("divider");
 
-range.addEventListener("input",function(){
+slider.addEventListener("input", function(){
 
-after.style.width=this.value+"%";
-line.style.left=this.value+"%";
+let value = this.value + "%";
+
+afterWrapper.style.width = value;
+divider.style.left = value;
 
 });
 
