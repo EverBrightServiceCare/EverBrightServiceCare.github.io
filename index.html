@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>EverBright Service Care</title>
 
 <style>
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
 body{
 font-family:Arial, sans-serif;
+margin:0;
 background:#f4f4f4;
 color:#333;
 line-height:1.6;
 }
 
+/* HEADER */
+
 header{
-position:relative;
+background:#16375f;
 color:white;
 text-align:center;
-padding:100px 20px;
-overflow:hidden;
-}
-
-header::before{
-content:"";
-position:absolute;
-inset:0;
-background:
-linear-gradient(rgba(22,55,95,.78),rgba(22,55,95,.78)),
-url("images/image0 (3).png") center/cover no-repeat;
-z-index:0;
-}
-
-header .hero-content{
-position:relative;
-z-index:1;
+padding:90px 20px;
 }
 
 header h1{
 font-size:3rem;
 margin-bottom:10px;
 }
+
+header p{
+font-size:1.3rem;
+}
+
+/* SECTIONS */
 
 section{
 max-width:1100px;
@@ -56,124 +46,102 @@ padding:60px 20px;
 
 h2{
 color:#16375f;
-font-size:2.2rem;
-margin-bottom:25px;
+margin-bottom:20px;
 }
+
+/* SERVICES */
 
 .services ul{
 padding-left:20px;
 }
 
 .services li{
-margin-bottom:12px;
+margin-bottom:10px;
 font-size:1.1rem;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.gallery-item{
-background:white;
-border-radius:14px;
-overflow:hidden;
-box-shadow:0 4px 14px rgba(0,0,0,.08);
-}
-
-.gallery-item img{
-width:100%;
-display:block;
-}
-
-.gallery-item p{
-padding:14px;
-font-weight:bold;
-color:#16375f;
 }
 
 /* BEFORE AFTER SLIDER */
 
-.before-after-wrap{
-max-width:900px;
-margin:40px auto;
-}
-
-.before-after-slider{
+.slider-container{
 position:relative;
-width:100%;
+max-width:800px;
+margin:auto;
 overflow:hidden;
-border-radius:14px;
 }
 
-.before-after-slider img{
+.slider-container img{
 width:100%;
 display:block;
 }
 
-.after-image-wrap{
+.after-img{
 position:absolute;
 top:0;
 left:0;
 width:50%;
 overflow:hidden;
-}
-
-.slider-line{
-position:absolute;
-top:0;
-left:50%;
-width:3px;
 height:100%;
-background:white;
 }
 
-.slider-control{
-position:absolute;
-inset:0;
+.slider{
 width:100%;
-opacity:0;
-cursor:ew-resize;
+margin-top:10px;
 }
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* CONTACT */
 
 .contact{
 background:#2b4673;
 color:white;
 text-align:center;
 padding:60px 20px;
-margin-top:40px;
 }
 
-.quote-button{
+.quote-btn{
 display:inline-block;
-background:#d9b24c;
-color:#16375f;
-text-decoration:none;
-padding:15px 30px;
-border-radius:8px;
-font-weight:bold;
 margin-top:15px;
+background:#d9b24c;
+padding:14px 28px;
+border-radius:8px;
+text-decoration:none;
+color:#16375f;
+font-weight:bold;
 }
+
+/* FOOTER */
 
 footer{
 background:#16375f;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-<div class="hero-content">
+
 <h1>EverBright Service Care</h1>
+
 <p>Professional Exterior Cleaning & Jet Washing</p>
-</div>
+
 </header>
 
 <section>
@@ -182,8 +150,7 @@ margin-top:40px;
 
 <p>
 EverBright Service Care specialises in professional exterior cleaning and jet washing services.
-We help residential and commercial properties restore surfaces and maintain a clean appearance
-with reliable service and attention to detail.
+We restore patios, driveways, walkways and outdoor surfaces for residential and commercial properties.
 </p>
 
 </section>
@@ -195,12 +162,10 @@ with reliable service and attention to detail.
 <ul>
 <li>Driveway cleaning</li>
 <li>Patio cleaning</li>
-<li>Walkway cleaning</li>
 <li>Jet washing</li>
+<li>Walkway cleaning</li>
 <li>Poolside cleaning</li>
 <li>Steam room and sauna cleaning</li>
-<li>Residential exterior cleaning</li>
-<li>Commercial exterior cleaning</li>
 </ul>
 
 </section>
@@ -209,23 +174,17 @@ with reliable service and attention to detail.
 
 <h2>Patio Cleaning Transformation</h2>
 
-<div class="before-after-wrap">
+<div class="slider-container">
 
-<div class="before-after-slider">
+<img src="images/patio before.jpeg">
 
-<img src="images/patio-before.png" class="before-image">
+<div class="after-img" id="after">
 
-<div class="after-image-wrap" id="afterImageWrap">
-
-<img src="images/image0 (3).png" class="after-image">
+<img src="images/patio after.jpeg">
 
 </div>
 
-<div class="slider-line" id="sliderLine"></div>
-
-<input type="range" min="0" max="100" value="50" class="slider-control" id="sliderControl">
-
-</div>
+<input type="range" min="0" max="100" value="50" class="slider" id="slider">
 
 </div>
 
@@ -237,15 +196,9 @@ with reliable service and attention to detail.
 
 <div class="gallery">
 
-<div class="gallery-item">
 <img src="images/mainwalkway.jpg">
-<p>Walkway cleaning result</p>
-</div>
 
-<div class="gallery-item">
 <img src="images/understeamseats.jpg">
-<p>Steam room seating area detail clean</p>
-</div>
 
 </div>
 
@@ -255,12 +208,14 @@ with reliable service and attention to detail.
 
 <h2>Contact</h2>
 
-<p>Email us for quotes and enquiries:</p>
+<p>Email us for a quote:</p>
 
-<p><strong>everbrightservicecare@gmail.com</strong></p>
+<p><strong>info@everbrightservicecare.com</strong></p>
 
-<a class="quote-button" href="mailto:everbrightservicecare@gmail.com?subject=Free Quote Request">
-Request a Free Quote
+<a class="quote-btn" href="mailto:info@everbrightservicecare.com">
+
+Request Free Quote
+
 </a>
 
 </section>
@@ -273,17 +228,17 @@ Request a Free Quote
 
 <script>
 
-const slider=document.getElementById("sliderControl");
-const after=document.getElementById("afterImageWrap");
-const line=document.getElementById("sliderLine");
+const slider=document.getElementById("slider");
+const after=document.getElementById("after");
 
 slider.addEventListener("input",function(){
-let value=this.value+"%";
-after.style.width=value;
-line.style.left=value;
+
+after.style.width=this.value+"%";
+
 });
 
 </script>
 
 </body>
+
 </html>
