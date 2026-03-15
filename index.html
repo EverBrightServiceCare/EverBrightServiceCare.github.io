@@ -1,291 +1,694 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
+
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
 <title>EverBright Service Care</title>
 
+
+
 <style>
 
+
+
+/* GLOBAL */
+
+
+
 body{
+
 font-family:Arial, sans-serif;
+
 margin:0;
+
 background:#f4f4f4;
+
 color:#333;
+
 }
 
-/* HEADER */
 
-header{
-background:#16375f;
-color:white;
-text-align:center;
-padding:90px 20px;
-}
-
-header h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-header p{
-font-size:1.3rem;
-}
-
-/* SECTIONS */
 
 section{
+
 max-width:1100px;
+
 margin:auto;
-padding:60px 20px;
+
+padding:70px 20px;
+
 }
+
+
 
 h2{
+
+text-align:center;
+
 color:#16375f;
-margin-bottom:20px;
+
+margin-bottom:30px;
+
+font-size:32px;
+
 }
 
-/* BEFORE AFTER SLIDER */
+
+
+/* HERO HEADER */
+
+
+
+.hero{
+
+position:relative;
+
+height:450px;
+
+background:url("images/header.png") center/cover no-repeat;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+
+.hero-overlay{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+}
+
+
+
+.hero-text{
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+
+.hero-text h1{
+
+font-size:3.4rem;
+
+margin-bottom:15px;
+
+}
+
+
+
+.hero-text p{
+
+font-size:1.3rem;
+
+margin-bottom:25px;
+
+}
+
+
+
+/* CTA BUTTON */
+
+
+
+.cta{
+
+background:#d9b24c;
+
+color:#16375f;
+
+padding:15px 32px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+font-size:18px;
+
+}
+
+
+
+/* ABOUT */
+
+
+
+.about{
+
+text-align:center;
+
+font-size:18px;
+
+line-height:1.6;
+
+max-width:750px;
+
+margin:auto;
+
+}
+
+
+
+/* SLIDER */
+
+
 
 .slider-container{
+
 position:relative;
-max-width:850px;
-margin:auto;
+
+max-width:900px;
+
+margin:50px auto;
+
 overflow:hidden;
+
 }
+
+
 
 .before-img{
+
 width:100%;
+
 display:block;
+
 }
+
+
 
 .after-img{
+
 position:absolute;
+
 top:0;
+
 left:0;
+
 width:100%;
+
 height:100%;
+
 object-fit:cover;
+
 clip-path: inset(0 50% 0 0);
+
 }
+
+
 
 .divider{
+
 position:absolute;
+
 top:0;
+
 left:50%;
+
 width:3px;
+
 height:100%;
+
 background:white;
+
 z-index:3;
+
 }
 
-/* SMALLER HANDLE */
+
 
 .handle{
+
 position:absolute;
+
 top:50%;
+
 left:50%;
+
 transform:translate(-50%,-50%);
+
 width:22px;
+
 height:28px;
+
 background:white;
+
 border-radius:6px;
+
 border:2px solid #16375f;
+
 }
 
-/* LABELS */
+
 
 .label{
+
 position:absolute;
+
 top:20px;
+
 background:rgba(0,0,0,0.6);
+
 color:white;
+
 padding:6px 12px;
+
 font-size:14px;
+
 border-radius:4px;
+
 z-index:4;
-transition:opacity .2s;
+
 }
+
+
 
 .before-label{
+
 left:20px;
+
 }
+
+
 
 .after-label{
+
 right:20px;
+
 }
 
+
+
 input[type=range]{
+
 position:absolute;
+
 top:0;
+
 left:0;
+
 width:100%;
+
 height:100%;
+
 opacity:0;
+
 cursor:ew-resize;
+
 z-index:5;
+
 }
+
+
 
 /* GALLERY */
 
+
+
 .gallery{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+
+gap:25px;
+
 }
 
+
+
 .gallery img{
+
 width:100%;
+
 border-radius:10px;
+
 }
+
+
 
 /* CONTACT */
 
+
+
 .contact{
-background:#2b4673;
+
+background:#16375f;
+
 color:white;
+
 text-align:center;
+
 padding:60px 20px;
+
 }
 
-.quote-btn{
-display:inline-block;
-margin-top:15px;
-background:#d9b24c;
-padding:14px 28px;
-border-radius:8px;
-text-decoration:none;
-color:#16375f;
-font-weight:bold;
-}
 
-/* FOOTER */
 
 footer{
-background:#16375f;
+
+background:#0d2442;
+
 color:white;
+
 text-align:center;
+
 padding:20px;
+
 }
+
+
 
 </style>
 
+
+
 </head>
+
+
 
 <body>
 
-<header>
+
+
+<!-- HERO -->
+
+
+
+<header class="hero">
+
+
+
+<div class="hero-overlay"></div>
+
+
+
+<div class="hero-text">
+
+
 
 <h1>EverBright Service Care</h1>
+
+
+
 <p>Professional Exterior Cleaning & Jet Washing</p>
+
+
+
+<a class="cta" href="mailto:info@everbrightservicecare.com">
+
+Get Free Quote
+
+</a>
+
+
+
+</div>
+
+
 
 </header>
 
+
+
+<!-- ABOUT -->
+
+
+
 <section>
+
+
 
 <h2>About Us</h2>
 
-<p>
+
+
+<p class="about">
+
 EverBright Service Care specialises in professional exterior cleaning and jet washing services.
+
 We restore patios, driveways, walkways and outdoor surfaces for residential and commercial properties.
+
 </p>
+
+
 
 </section>
 
+
+
+<!-- PATIO SLIDER -->
+
+
+
 <section>
+
+
 
 <h2>Patio Cleaning Transformation</h2>
 
+
+
 <div class="slider-container">
 
-<span class="label before-label" id="beforeLabel">Before</span>
-<span class="label after-label" id="afterLabel">After</span>
 
-<!-- DIRTY IMAGE (LEFT) -->
+
+<span class="label before-label">Before</span>
+
+<span class="label after-label">After</span>
+
+
+
 <img src="images/patio before.jpeg" class="before-img">
 
-<!-- CLEAN IMAGE (RIGHT) -->
-<img src="images/patio after.jpeg" class="after-img" id="afterImage">
 
-<div class="divider" id="divider">
+
+<img src="images/patio after.jpeg" class="after-img" id="after1">
+
+
+
+<div class="divider" id="divider1">
+
 <div class="handle"></div>
-</div>
-
-<input type="range" min="0" max="100" value="50" id="slider">
 
 </div>
+
+
+
+<input type="range" min="0" max="100" value="50" class="slider">
+
+
+
+</div>
+
+
 
 </section>
+
+
+
+<!-- STEAM SEATS SLIDER -->
+
+
 
 <section>
 
-<h2>Recent Results</h2>
 
-<div class="gallery">
 
-<img src="images/mainwalkway.jpg">
+<h2>Steam Seating Area Cleaning</h2>
 
-<img src="images/understeamseats.jpg">
+
+
+<div class="slider-container">
+
+
+
+<span class="label before-label">Before</span>
+
+<span class="label after-label">After</span>
+
+
+
+<img src="images/understeams seats before.jpeg" class="before-img">
+
+
+
+<img src="images/understeam seats after.jpeg" class="after-img" id="after2">
+
+
+
+<div class="divider" id="divider2">
+
+<div class="handle"></div>
 
 </div>
 
+
+
+<input type="range" min="0" max="100" value="50" class="slider">
+
+
+
+</div>
+
+
+
 </section>
+
+
+
+<!-- GALLERY -->
+
+
+
+<section>
+
+
+
+<h2>Recent Results</h2>
+
+
+
+<div class="gallery">
+
+
+
+<img src="images/image0 (3).png">
+
+<img src="images/mainwalkway.jpg">
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+
 
 <section class="contact">
 
+
+
 <h2>Contact</h2>
 
-<p>Email us for a quote:</p>
 
-<p><strong>info@everbrightservicecare.com</strong></p>
 
-<a class="quote-btn" href="mailto:info@everbrightservicecare.com">
+<p>info@everbrightservicecare.com</p>
+
+
+
+<a class="cta" href="mailto:info@everbrightservicecare.com">
+
 Request Free Quote
+
 </a>
+
+
 
 </section>
 
+
+
 <footer>
+
+
 
 <p>© EverBright Service Care</p>
 
+
+
 </footer>
+
+
 
 <script>
 
-const slider = document.getElementById("slider");
-const afterImage = document.getElementById("afterImage");
-const divider = document.getElementById("divider");
-const beforeLabel = document.getElementById("beforeLabel");
-const afterLabel = document.getElementById("afterLabel");
 
-slider.addEventListener("input", function(){
 
-let value = this.value;
+const sliders=document.querySelectorAll(".slider");
 
-afterImage.style.clipPath = "inset(0 " + (100-value) + "% 0 0)";
-divider.style.left = value + "%";
 
-/* Hide labels when slider overlaps */
 
-if(value > 30){
-beforeLabel.style.opacity = 0;
-}else{
-beforeLabel.style.opacity = 1;
-}
+sliders.forEach((slider,index)=>{
 
-if(value < 70){
-afterLabel.style.opacity = 0;
-}else{
-afterLabel.style.opacity = 1;
-}
+
+
+let after=document.querySelector("#after"+(index+1));
+
+let divider=document.querySelector("#divider"+(index+1));
+
+
+
+slider.addEventListener("input",function(){
+
+
+
+let value=this.value;
+
+
+
+after.style.clipPath="inset(0 "+(100-value)+"% 0 0)";
+
+divider.style.left=value+"%";
+
+
 
 });
 
+
+
+});
+
+
+
 </script>
+
+
 
 </body>
 
-</html>
+
+
+</html
+
