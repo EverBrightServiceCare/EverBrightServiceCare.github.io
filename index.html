@@ -1,694 +1,312 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
 <head>
-
-
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>EverBright Service Care</title>
 
-
-
 <style>
-
-
-
-/* GLOBAL */
-
-
-
-body{
-
-font-family:Arial, sans-serif;
-
-margin:0;
-
-background:#f4f4f4;
-
-color:#333;
-
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background: #f4f4f4;
+color: #333;
 }
 
-
-
-section{
-
-max-width:1100px;
-
-margin:auto;
-
-padding:70px 20px;
-
+section {
+max-width: 1100px;
+margin: auto;
+padding: 70px 20px;
 }
 
-
-
-h2{
-
-text-align:center;
-
-color:#16375f;
-
-margin-bottom:30px;
-
-font-size:32px;
-
+h2 {
+text-align: center;
+color: #16375f;
+margin-bottom: 30px;
+font-size: 32px;
 }
 
-
-
-/* HERO HEADER */
-
-
-
-.hero{
-
-position:relative;
-
-height:450px;
-
-background:url("images/header.png") center/cover no-repeat;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-color:white;
-
+.hero {
+position: relative;
+height: 450px;
+background: url("images/header.png") center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
 }
 
-
-
-.hero-overlay{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,0.45);
-
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.45);
 }
 
-
-
-.hero-text{
-
-position:relative;
-
-z-index:2;
-
+.hero-text {
+position: relative;
+z-index: 2;
+padding: 0 20px;
 }
 
-
-
-.hero-text h1{
-
-font-size:3.4rem;
-
-margin-bottom:15px;
-
+.hero-text h1 {
+font-size: 3.4rem;
+margin-bottom: 15px;
 }
 
-
-
-.hero-text p{
-
-font-size:1.3rem;
-
-margin-bottom:25px;
-
+.hero-text p {
+font-size: 1.3rem;
+margin-bottom: 25px;
 }
 
-
-
-/* CTA BUTTON */
-
-
-
-.cta{
-
-background:#d9b24c;
-
-color:#16375f;
-
-padding:15px 32px;
-
-border-radius:8px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-font-size:18px;
-
+.cta {
+display: inline-block;
+background: #d9b24c;
+color: #16375f;
+padding: 15px 32px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+font-size: 18px;
 }
 
-
-
-/* ABOUT */
-
-
-
-.about{
-
-text-align:center;
-
-font-size:18px;
-
-line-height:1.6;
-
-max-width:750px;
-
-margin:auto;
-
+.about {
+text-align: center;
+font-size: 18px;
+line-height: 1.6;
+max-width: 750px;
+margin: auto;
 }
 
-
-
-/* SLIDER */
-
-
-
-.slider-container{
-
-position:relative;
-
-max-width:900px;
-
-margin:50px auto;
-
-overflow:hidden;
-
+.slider-container {
+position: relative;
+max-width: 900px;
+margin: 50px auto;
+overflow: hidden;
+border-radius: 10px;
 }
 
-
-
-.before-img{
-
-width:100%;
-
-display:block;
-
+.before-img {
+width: 100%;
+display: block;
 }
 
-
-
-.after-img{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-clip-path: inset(0 50% 0 0);
-
+.after-img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+clip-path: inset(0 0 0 50%);
 }
 
-
-
-.divider{
-
-position:absolute;
-
-top:0;
-
-left:50%;
-
-width:3px;
-
-height:100%;
-
-background:white;
-
-z-index:3;
-
+.divider {
+position: absolute;
+top: 0;
+left: 50%;
+width: 3px;
+height: 100%;
+background: white;
+z-index: 3;
+pointer-events: none;
 }
 
-
-
-.handle{
-
-position:absolute;
-
-top:50%;
-
-left:50%;
-
-transform:translate(-50%,-50%);
-
-width:22px;
-
-height:28px;
-
-background:white;
-
-border-radius:6px;
-
-border:2px solid #16375f;
-
+.handle {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 22px;
+height: 28px;
+background: white;
+border-radius: 6px;
+border: 2px solid #16375f;
 }
 
-
-
-.label{
-
-position:absolute;
-
-top:20px;
-
-background:rgba(0,0,0,0.6);
-
-color:white;
-
-padding:6px 12px;
-
-font-size:14px;
-
-border-radius:4px;
-
-z-index:4;
-
+.label {
+position: absolute;
+top: 20px;
+background: rgba(0, 0, 0, 0.6);
+color: white;
+padding: 6px 12px;
+font-size: 14px;
+border-radius: 4px;
+z-index: 4;
+transition: opacity 0.2s ease;
 }
 
-
-
-.before-label{
-
-left:20px;
-
+.before-label {
+left: 20px;
 }
 
-
-
-.after-label{
-
-right:20px;
-
+.after-label {
+right: 20px;
 }
 
-
-
-input[type=range]{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-opacity:0;
-
-cursor:ew-resize;
-
-z-index:5;
-
+input[type="range"] {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+cursor: ew-resize;
+z-index: 5;
 }
 
-
-
-/* GALLERY */
-
-
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
 }
 
-
-
-.gallery img{
-
-width:100%;
-
-border-radius:10px;
-
+.gallery img {
+width: 100%;
+border-radius: 10px;
+display: block;
 }
 
-
-
-/* CONTACT */
-
-
-
-.contact{
-
-background:#16375f;
-
-color:white;
-
-text-align:center;
-
-padding:60px 20px;
-
+.contact {
+background: white;
+color: #333;
+text-align: center;
+padding: 50px 20px;
+border-top: 1px solid #eee;
 }
 
-
-
-footer{
-
-background:#0d2442;
-
-color:white;
-
-text-align:center;
-
-padding:20px;
-
+.contact p {
+margin: 10px 0;
+font-size: 18px;
 }
 
+footer {
+background: #0d2442;
+color: white;
+text-align: center;
+padding: 20px;
+}
 
+@media (max-width: 768px) {
+.hero {
+height: 340px;
+}
 
+.hero-text h1 {
+font-size: 2.4rem;
+}
+
+.hero-text p {
+font-size: 1.05rem;
+}
+
+h2 {
+font-size: 24px;
+}
+
+.cta {
+font-size: 16px;
+padding: 13px 24px;
+}
+}
 </style>
-
-
-
 </head>
 
-
-
 <body>
-
-
-
-<!-- HERO -->
-
-
-
 <header class="hero">
-
-
-
 <div class="hero-overlay"></div>
 
-
-
 <div class="hero-text">
-
-
-
 <h1>EverBright Service Care</h1>
-
-
-
 <p>Professional Exterior Cleaning & Jet Washing</p>
-
-
-
-<a class="cta" href="mailto:info@everbrightservicecare.com">
-
-Get Free Quote
-
-</a>
-
-
-
+<a class="cta" href="mailto:info@everbrightservicecare.com">Get Free Quote</a>
 </div>
-
-
-
 </header>
 
-
-
-<!-- ABOUT -->
-
-
-
 <section>
-
-
-
 <h2>About Us</h2>
 
-
-
 <p class="about">
-
 EverBright Service Care specialises in professional exterior cleaning and jet washing services.
-
 We restore patios, driveways, walkways and outdoor surfaces for residential and commercial properties.
-
 </p>
-
-
-
 </section>
 
-
-
-<!-- PATIO SLIDER -->
-
-
-
 <section>
-
-
-
 <h2>Patio Cleaning Transformation</h2>
 
-
-
 <div class="slider-container">
+<span class="label before-label" id="beforeLabel1">Before</span>
+<span class="label after-label" id="afterLabel1">After</span>
 
-
-
-<span class="label before-label">Before</span>
-
-<span class="label after-label">After</span>
-
-
-
-<img src="images/patio before.jpeg" class="before-img">
-
-
-
-<img src="images/patio after.jpeg" class="after-img" id="after1">
-
-
+<img src="images/patio before.jpeg" class="before-img" alt="Patio before cleaning" />
+<img src="images/patio after.jpeg" class="after-img" id="after1" alt="Patio after cleaning" />
 
 <div class="divider" id="divider1">
-
 <div class="handle"></div>
-
 </div>
 
-
-
-<input type="range" min="0" max="100" value="50" class="slider">
-
-
-
+<input type="range" min="0" max="100" value="50" class="slider" />
 </div>
-
-
-
 </section>
 
-
-
-<!-- STEAM SEATS SLIDER -->
-
-
-
 <section>
-
-
-
 <h2>Steam Seating Area Cleaning</h2>
 
-
-
 <div class="slider-container">
+<span class="label before-label" id="beforeLabel2">Before</span>
+<span class="label after-label" id="afterLabel2">After</span>
 
-
-
-<span class="label before-label">Before</span>
-
-<span class="label after-label">After</span>
-
-
-
-<img src="images/understeams seats before.jpeg" class="before-img">
-
-
-
-<img src="images/understeam seats after.jpeg" class="after-img" id="after2">
-
-
+<img src="images/understeams seats before.jpeg" class="before-img" alt="Steam seating area before cleaning" />
+<img src="images/understeam seats after.jpeg" class="after-img" id="after2" alt="Steam seating area after cleaning" />
 
 <div class="divider" id="divider2">
-
 <div class="handle"></div>
-
 </div>
 
-
-
-<input type="range" min="0" max="100" value="50" class="slider">
-
-
-
+<input type="range" min="0" max="100" value="50" class="slider" />
 </div>
-
-
-
 </section>
-
-
-
-<!-- GALLERY -->
-
-
 
 <section>
-
-
-
 <h2>Recent Results</h2>
 
-
-
 <div class="gallery">
-
-
-
-<img src="images/image0 (3).png">
-
-<img src="images/mainwalkway.jpg">
-
-
-
+<img src="images/image0 (3).png" alt="Patio before and after result" />
+<img src="images/mainwalkway.jpg" alt="Walkway cleaning result" />
 </div>
-
-
-
 </section>
-
-
-
-<!-- CONTACT -->
-
-
 
 <section class="contact">
-
-
-
-<h2>Contact</h2>
-
-
-
-<p>info@everbrightservicecare.com</p>
-
-
-
-<a class="cta" href="mailto:info@everbrightservicecare.com">
-
-Request Free Quote
-
-</a>
-
-
-
+<h2>Get a Free Quote</h2>
+<p>Email us at</p>
+<p><strong>info@everbrightservicecare.com</strong></p>
+<a class="cta" href="mailto:info@everbrightservicecare.com">Request Free Quote</a>
 </section>
 
-
-
 <footer>
-
-
-
 <p>© EverBright Service Care</p>
-
-
-
 </footer>
 
-
-
 <script>
+const sliders = document.querySelectorAll(".slider");
 
+sliders.forEach((slider, index) => {
+const number = index + 1;
+const after = document.getElementById("after" + number);
+const divider = document.getElementById("divider" + number);
+const beforeLabel = document.getElementById("beforeLabel" + number);
+const afterLabel = document.getElementById("afterLabel" + number);
 
+slider.addEventListener("input", function () {
+const value = Number(this.value);
 
-const sliders=document.querySelectorAll(".slider");
+after.style.clipPath = "inset(0 0 0 " + value + "%)";
+divider.style.left = value + "%";
 
-
-
-sliders.forEach((slider,index)=>{
-
-
-
-let after=document.querySelector("#after"+(index+1));
-
-let divider=document.querySelector("#divider"+(index+1));
-
-
-
-slider.addEventListener("input",function(){
-
-
-
-let value=this.value;
-
-
-
-after.style.clipPath="inset(0 "+(100-value)+"% 0 0)";
-
-divider.style.left=value+"%";
-
-
-
+beforeLabel.style.opacity = value < 18 ? "0" : "1";
+afterLabel.style.opacity = value > 82 ? "0" : "1";
 });
-
-
-
 });
-
-
-
 </script>
-
-
-
 </body>
-
-
-
-</html
-
+</html>
