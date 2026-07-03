@@ -38,8 +38,9 @@ margin:auto;
     position:relative;
     min-height:100vh;
     background:
-        linear-gradient(rgba(8,18,45,.70),rgba(8,18,45,.78)),
-        url("images/Main Header.png") center center/cover no-repeat;
+     background:
+linear-gradient(rgba(8,18,45,.78), rgba(8,18,45,.82)),
+url("images/hero-pg.png") center center/cover no-repeat;
 
     display:flex;
     justify-content:center;
