@@ -96,6 +96,8 @@ backdrop-filter:blur(10px);
     letter-spacing:-3px;
     margin:0;
     text-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
 .hero h1 span{
     display:block;
     color:#f0b73f;
