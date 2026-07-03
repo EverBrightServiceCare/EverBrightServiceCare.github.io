@@ -35,24 +35,22 @@ margin:auto;
 /* ===== HERO ===== */
 
 .hero{
+    position:relative;
+    min-height:100vh;
+    background:
+        linear-gradient(rgba(8,18,45,.70),rgba(8,18,45,.78)),
+        url("images/Main Header.png") center center/cover no-repeat;
 
-position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 
-height:100vh;
+    color:#fff;
 
-background:url("images/Main Header.png") center center/cover no-repeat;
+    overflow:hidden;
 
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-color:white;
-
-overflow:hidden;
+    padding:160px 20px 120px;
 
 }
 
