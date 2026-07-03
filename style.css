@@ -38,21 +38,16 @@ margin:auto;
     position:relative;
     min-height:100vh;
     background:
-     background:
-linear-gradient(rgba(8,18,45,.78), rgba(8,18,45,.82)),
-url("images/hero-bg.png") center center/cover no-repeat;
+        linear-gradient(rgba(8,18,45,.78), rgba(8,18,45,.82)),
+        url("images/hero-pg.png") center center/cover no-repeat;
 
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-
     color:#fff;
-
     overflow:hidden;
-
     padding:160px 20px 120px;
-
 }
 
 .overlay{
