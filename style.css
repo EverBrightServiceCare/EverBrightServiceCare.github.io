@@ -40,7 +40,7 @@ margin:auto;
     background:
      background:
 linear-gradient(rgba(8,18,45,.78), rgba(8,18,45,.82)),
-url("images/hero-pg.png") center center/cover no-repeat;
+url("images/hero-bg.png") center center/cover no-repeat;
 
     display:flex;
     justify-content:center;
